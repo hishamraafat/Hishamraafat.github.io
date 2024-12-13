@@ -1,107 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Page</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #007bff;
-            color: white;
-        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
 
-        .portfolio-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
+        .search-bar {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
 
-        /* Project Card Styles */
-        .project-card {
-            background-color: white;
-            width: 300px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.2s ease;
-        }
+        .search-bar input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+        }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
 
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+        /* Project Card Styles */
+        .project-card {
+            background-color: white;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-        .project-info {
-            padding: 15px;
-        }
+        .project-card.loaded {
+            opacity: 1;
+            transform: scale(1);
+        }
 
-        .project-title {
-            font-size: 18px;
-            margin: 10px 0;
-            color: #333;
-        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-        .project-description {
-            font-size: 14px;
-            margin: 10px 0;
-            color: #666;
-        }
+        .project-info {
+            padding: 15px;
+        }
 
-        .project-link {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-        }
+        .project-title {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
 
-        .project-link:hover {
-            background-color: #0056b3;
-        }
-    </style>
+        .project-description {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .project-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Tags Section */
+        .project-tags {
+            margin-top: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin: 5px 5px 0 0;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #e0e0e0;
+            color: #333;
+            border-radius: 20px;
+        }
+
+        .tag:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
-    <main class="portfolio-container">
-        <!-- Project 1 -->
-        <div class="project-card">
-            <img src="/_D8_BA_D9_84_D8_A7_D9_81 (1).png" alt="Project Image" class="project-image">
-            <div class="project-info">
-                <h2 class="project-title">First Aid 2020 course - full project posts</h2>
-                <p class="project-description">Full posts of "First Aid Course 2020".</p>
-                <a href="https://drive.google.com/drive/folders/15rFrA8GQX7_A_DEuFZhcdJkEPEEF35B2" class="project-link" target="_blank">View</a>
-            </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="project-card">
-            <img src="https://via.placeholder.com/500x300" alt="Project Image" class="project-image">
-            <div class="project-info">
-                <h2 class="project-title">First Aid 2020 course - full project designs</h2>
-                <p class="project-description">Full designs of "First Aid Course 2020".</p>
-                <a href="https://example.com" class="project-link" target="_blank">View</a>
-            </div>
-        </div>
-    </main>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by tag...">
+    </div>
+
+    <main class="portfolio-container">
+        <!-- Project 1 -->
+        <div class="project-card" data-tags="First Aid, Posts, Health">
+            <img src="/Images/1.png" alt="Project Image" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">First Aid 2020 course - full project posts</h2>
+                <p class="project-description">Full posts of "First Aid Course 2020".</p>
+                <a href="https://drive.google.com/drive/folders/15rFrA8GQX7_A_DEuFZhcdJkEPEEF35B2" class="project-link" target="_blank">
+                    <i class="fas fa-eye view-icon"></i> View
+                </a>
+                <div class="project-tags">
+                    <span class="tag">First Aid</span>
+                    <span class="tag">Posts</span>
+                    <span class="tag">Health</span>
+                </div>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card" data-tags="Design, Creativity, Health">
+            <img src="https://via.placeholder.com/500x300" alt="Project Image" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">اكسب تذكرة مجانية - كورس الاسعافات الأولية</h2>
+                <p class="project-description">
+🔘معلومات كتير بنسمعها في المواقف الطارئة، وفي المواقف اللي بنحتاج فيها الإسعافات الأولية، منها الصح ✔️ ومنها الغلط❌.
+
+شاركونا في التعليقات معلومة تعرفوها عن الإسعافات سواء صحيحة أو لا.  😁
+
+ وأكتر كومنت هياخد لايكات هيكسب معانا بطاقة حضور مجانية لإيفنت الإسعافات الأولية اللي بتقدمه جمعية طبيب المستقبل للسنة الـ ١٣. 😃
+
+المسابقة مستمرة حتى يوم السبت الساعة ١٢ مساءًا. ⏲️
+ومتنساش تمنشن صحابك اللي هيساعدوك. 💪
+
+#انقذ_حياة
+#Accidents_dont_come_with_a_notice
+#Future_doctor_society</p>
+                <a href="https://example.com" class="project-link" target="_blank">
+                    <i class="fas fa-eye view-icon"></i> View
+                </a>
+                <div class="project-tags">
+                    <span class="tag">Design</span>
+                    <span class="tag">Creativity</span>
+                    <span class="tag">Health</span>
+                </div>
+            </div>
+        </div>
+
+<!-- Project 2 -->
+        <div class="project-card" data-tags="Design, Creativity, Health">
+            <img src="https://via.placeholder.com/500x300" alt="Project Image" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">First Aid 2020 course - full project designs</h2>
+                <p class="project-description">Full designs of "First Aid Course 2020".</p>
+                <a href="https://example.com" class="project-link" target="_blank">
+                    <i class="fas fa-eye view-icon"></i> View
+                </a>
+                <div class="project-tags">
+                    <span class="tag">Design</span>
+                    <span class="tag">Creativity</span>
+                    <span class="tag">Health</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Add Loading Effect
+        window.addEventListener('load', () => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('loaded');
+                }, index * 200); // Stagger loading effect
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.project-card');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            cards.forEach(card => {
+                const tags = card.dataset.tags.toLowerCase();
+                if (tags.includes(searchTerm)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
