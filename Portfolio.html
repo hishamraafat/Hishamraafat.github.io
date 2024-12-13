@@ -48,20 +48,7 @@
             color: white;
         }
 
-        .search-bar {
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-bar input {
-            width: 300px;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #3182ce;
-            border-radius: 4px;
-        }
-
+      
         .portfolio-container {
             display: flex;
             flex-wrap: wrap;
@@ -178,7 +165,28 @@
             font-family: Arial, sans-serif; /* Modern font style */
         }
 
-      
+      /* Tag selection styles */
+.tag-selection {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tag-button {
+    padding: 10px 15px;
+    background-color: #3182ce;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.tag-button.selected {
+    background-color: #0056b3;
+}
+      /* Tag selection styles */
 
     </style>
 </head>
@@ -204,10 +212,14 @@
         <!-- Add your About Me content here -->
     </section>
 
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search by tag...">
-    </div>
+  <!-- Tag Selection -->
+<div class="tag-selection">
+    <button class="tag-button" data-tag="First Aid">First Aid</button>
+    <button class="tag-button" data-tag="Posts">Posts</button>
+    <button class="tag-button" data-tag="Design">Design</button>
+    <button class="tag-button" data-tag="Health">Health</button>
+    <!-- Add more tags as necessary -->
+</div>
 
     <main class="portfolio-container">
         <!-- Project 1 -->
@@ -435,22 +447,40 @@ Parrot fish🐦🐟</p>
                 }, index * 200); // Stagger loading effect
             });
         });
+// JavaScript to handle tag filtering
 
-        // Search Functionality
-        const searchInput = document.getElementById('searchInput');
-        const cards = document.querySelectorAll('.project-card');
+// Select all the tag buttons and project cards
+const tagButtons = document.querySelectorAll('.tag-button');
+const projectCards = document.querySelectorAll('.project-card');
 
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-            cards.forEach(card => {
-                const tags = card.dataset.tags.toLowerCase();
-                if (tags.includes(searchTerm)) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        });
+// Add event listeners for tag buttons
+tagButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const selectedTag = this.getAttribute('data-tag');
+        
+        // Toggle the 'selected' class on the button
+        this.classList.toggle('selected');
+        
+        // Filter projects based on the selected tag
+        filterProjects(selectedTag);
+    });
+});
+
+// Function to filter projects based on selected tags
+function filterProjects(selectedTag) {
+    projectCards.forEach(card => {
+        const cardTags = card.getAttribute('data-tags').split(', ');
+        
+        // Show or hide projects based on matching tags
+        if (cardTags.includes(selectedTag)) {
+            card.style.display = 'block'; // Show the project
+        } else {
+            card.style.display = 'none'; // Hide the project
+        }
+    });
+}
+
+       
     </script>
 </body>
 <!-- Floating CTA Button with Icon and Phrase -->
