@@ -7,6 +7,31 @@
     <!-- Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+.cta-button {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px;  /* Distance from the right of the screen */
+  background-color: #007bff; /* Button color */
+  color: white;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Center the icon and text vertically */
+  justify-content: center;
+  gap: 10px; /* Space between the icon and the text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.cta-button i {
+  font-size: 20px; /* Adjust icon size */
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* Hover effect */
+}
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
@@ -157,10 +182,12 @@
         }
 
         .social-icon {
-            font-size: 30px; /* Icon size */
+            font-size: 20px; /* Icon size */
             margin: 0 15px;
             color: white; /* Icon color */
             transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Makes the icons appear side by side */
+
         }
 
         .social-icon:hover {
@@ -190,6 +217,8 @@
                 <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin"></i>
                 </a>
+            <a href="your-cv-link.pdf" class="social-icon" target="_blank"><i class="fas fa-file-pdf"></i></a> <!-- PDF Icon -->
+
             </div>
         </div>
     </header>
@@ -452,4 +481,8 @@ Parrot fish🐦🐟</p>
         });
     </script>
 </body>
+<!-- Floating CTA Button with Icon and Phrase -->
+<a href="https://yourportfolio.com" class="cta-button" target="_blank">
+  <i class="fas fa-briefcase"></i> Contact me !
+</a>
 </html>
