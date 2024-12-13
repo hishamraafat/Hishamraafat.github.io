@@ -32,6 +32,32 @@
             padding-bottom: 5px;
             margin-bottom: 15px;
         }
+.cta-button {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px;  /* Distance from the right of the screen */
+  background-color: #007bff; /* Button color */
+  color: white;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Center the icon and text vertically */
+  justify-content: center;
+  gap: 10px; /* Space between the icon and the text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.cta-button i {
+  font-size: 20px; /* Adjust icon size */
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* Hover effect */
+}
+
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -186,4 +212,8 @@
         </footer>
     </div>
 </body>
+<!-- Floating CTA Button with Icon and Phrase -->
+<a href="https://yourportfolio.com" class="cta-button" target="_blank">
+  <i class="fas fa-briefcase"></i> View Portfolio
+</a>
 </html>
