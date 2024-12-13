@@ -114,28 +114,38 @@
         }
 
         /* Tags Section */
-        .project-tags {
-            margin-top: 15px;
-        }
+       /* Tag selection styles */
+.tag-selection {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-        .tag {
-            display: inline-block;
-            margin: 5px 5px 0 0;
-            padding: 5px 10px;
-            font-size: 12px;
-            background-color: #e0e0e0;
-            color: #333;
-            border-radius: 20px;
-        }
+.tag-button {
+    padding: 6px 12px; /* Adjust padding for a flatter look */
+    background-color: #4CAF50; /* Modern flat green color */
+    color: white;
+    border-radius: 5px; /* Slightly rounded for a subtle flat effect */
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    border: none; /* Remove border for a flat design */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
 
-        .tag:hover {
-            background-color: #3182ce;
-            color: white;
-        }
+.tag-button.selected {
+    background-color: #45a049; /* Slightly darker shade for the selected state */
+}
 
-        .hidden {
-            display: none;
-        }
+.tag-button:hover {
+    background-color: #66bb6a; /* Lighter shade for hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly bigger shadow on hover */
+}
+
+.tag-button:active {
+    transform: translateY(2px); /* Button push effect when clicked */
+}
   /* Basic styles for header */
         .portfolio-header {
             background-color: #3182ce; /* Blue background */
