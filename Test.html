@@ -123,12 +123,70 @@
         .hidden {
             display: none;
         }
+/* Basic styles for header */
+.portfolio-header {
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-picture img {
+    width: 150px; /* Set size of the image */
+    height: 150px; /* Set size of the image */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Make sure image fits properly */
+}
+
+.portfolio-title {
+    font-size: 2.5rem;
+    color: #333; /* Title color */
+    margin-top: 20px;
+}
+
+.social-media-links {
+    margin-top: 20px;
+}
+
+.social-icon img {
+    width: 40px; /* Icon size */
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Hover effect for icons */
+}
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
+    <header class="portfolio-header">
+    <div class="header-content">
+        <!-- Profile Picture -->
+        <div class="profile-picture">
+            <img src="your-picture.jpg" alt="Hisham's Picture" />
+        </div>
+        
+        <!-- Portfolio Title -->
+        <h1 class="portfolio-title">Hisham's Portfolio</h1>
+
+        <!-- Social Media Links -->
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/your-profile" target="_blank" class="social-icon">
+                <img src="facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-icon">
+                <img src="linkedin-icon.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</header>
 
     <!-- Search Bar -->
     <div class="search-bar">
