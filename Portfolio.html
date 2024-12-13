@@ -123,70 +123,81 @@
         .hidden {
             display: none;
         }
-/* Basic styles for header */
-.portfolio-header {
-    background-color: #f4f4f4; /* Light background color */
-    padding: 20px 0;
-    text-align: center;
-}
+  /* Basic styles for header */
+        .portfolio-header {
+            background-color: #3182ce; /* Blue background */
+            color: white; /* Text color */
+            padding: 40px 0;
+            text-align: center;
+        }
 
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-.profile-picture img {
-    width: 150px; /* Set size of the image */
-    height: 150px; /* Set size of the image */
-    border-radius: 50%; /* Circular image */
-    object-fit: cover; /* Make sure image fits properly */
-}
+        .profile-picture img {
+            width: 150px; /* Set size of the image */
+            height: 150px; /* Set size of the image */
+            border-radius: 50%; /* Circular image */
+            object-fit: cover; /* Make sure image fits properly */
+            border: 5px solid white; /* White border around image */
+        }
 
-.portfolio-title {
-    font-size: 2.5rem;
-    color: #333; /* Title color */
-    margin-top: 20px;
-}
+        .portfolio-title {
+            font-size: 3rem;
+            color: white; /* Title color */
+            margin-top: 20px;
+            font-family: Arial, sans-serif; /* Modern font style */
+        }
 
-.social-media-links {
-    margin-top: 20px;
-}
+        .social-media-links {
+            margin-top: 20px;
+        }
 
-.social-icon img {
-    width: 40px; /* Icon size */
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-}
+        .social-icon {
+            font-size: 30px; /* Icon size */
+            margin: 0 15px;
+            color: white; /* Icon color */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
 
-.social-icon img:hover {
-    transform: scale(1.1); /* Hover effect for icons */
-}
+        .social-icon:hover {
+            transform: scale(1.1); /* Hover effect for icons */
+            color: #f0f0f0; /* Lighter color on hover */
+        }
 
     </style>
 </head>
 <body>
+ <!-- Header Section with Profile, Title, and Social Media Links -->
     <header class="portfolio-header">
-    <div class="header-content">
-        <!-- Profile Picture -->
-        <div class="profile-picture">
-            <img src="your-picture.jpg" alt="Hisham's Picture" />
-        </div>
-        
-        <!-- Portfolio Title -->
-        <h1 class="portfolio-title">Hisham's Portfolio</h1>
+        <div class="header-content">
+            <!-- Profile Picture -->
+            <div class="profile-picture">
+                <img src="your-picture.jpg" alt="Hisham's Picture" />
+            </div>
+            
+            <!-- Portfolio Title -->
+            <h1 class="portfolio-title">Hisham's Portfolio</h1>
 
-        <!-- Social Media Links -->
-        <div class="social-media-links">
-            <a href="https://www.facebook.com/your-profile" target="_blank" class="social-icon">
-                <img src="facebook-icon.png" alt="Facebook">
-            </a>
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-icon">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
+            <!-- Social Media Links -->
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
+
+    <!-- Other Content of the Portfolio Page -->
+    <section id="about-me">
+        <!-- Add your About Me content here -->
+    </section>
 
     <!-- Search Bar -->
     <div class="search-bar">
