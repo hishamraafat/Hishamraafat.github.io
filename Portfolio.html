@@ -114,28 +114,28 @@
         }
 
         /* Tags Section */
-       /* Tag selection styles */
-/* Tag selection styles */
-.tag-selection {
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Reduced gap between buttons */
-}
+        .project-tags {
+            margin-top: 15px;
+        }
 
-.tag-button {
-    padding: 5px 10px; /* Reduced padding for smaller buttons */
-    background-color: #3182ce;
-    color: white;
-    border-radius: 15px; /* Reduced border radius */
-    cursor: pointer;
-    font-size: 12px; /* Reduced font size */
-    transition: background-color 0.2s ease;
-}
+        .tag {
+            display: inline-block;
+            margin: 5px 5px 0 0;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #e0e0e0;
+            color: #333;
+            border-radius: 20px;
+        }
 
-.tag-button.selected {
-    background-color: #0056b3;
-}
+        .tag:hover {
+            background-color: #3182ce;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
   /* Basic styles for header */
         .portfolio-header {
             background-color: #3182ce; /* Blue background */
@@ -166,26 +166,39 @@
         }
 
 /* Tag selection styles */
+/* Tag selection styles */
 .tag-selection {
     margin: 20px auto;
     display: flex;
     justify-content: center;
-    gap: 10px; /* Reduced gap between buttons */
+    gap: 10px;
 }
 
 .tag-button {
-    padding: 5px 10px; /* Reduced padding for smaller buttons */
-    background-color: #3182ce;
+    padding: 6px 12px; /* Adjust padding for a flatter look */
+    background-color: #4CAF50; /* Modern flat green color */
     color: white;
-    border-radius: 15px; /* Reduced border radius */
+    border-radius: 5px; /* Slightly rounded for a subtle flat effect */
     cursor: pointer;
-    font-size: 12px; /* Reduced font size */
-    transition: background-color 0.2s ease;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    border: none; /* Remove border for a flat design */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
 .tag-button.selected {
-    background-color: #0056b3;
+    background-color: #45a049; /* Slightly darker shade for the selected state */
 }
+
+.tag-button:hover {
+    background-color: #66bb6a; /* Lighter shade for hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly bigger shadow on hover */
+}
+
+.tag-button:active {
+    transform: translateY(2px); /* Button push effect when clicked */
+}
+
       /* Tag selection styles */
 
     </style>
