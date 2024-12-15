@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elapsed Time Since Afsha's Goal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #d9534f;
+        }
+        #timer {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time Elapsed Since Afsha's Goal</h1>
+    <div id="timer">Loading...</div>
+
+    <script>
+        // Set the date and time of Afsha's goal in UTC (8:26 PM UTC on 27 Nov 2020)
+        const afshaGoalDate = new Date('2020-11-27T20:26:00Z');
+
+        function updateTimer() {
+            const now = new Date();
+            const elapsedTime = now - afshaGoalDate;
+
+            // Convert elapsed time to days, hours, minutes, and seconds
+            const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((elapsedTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+            // Display the result in the timer div
+            document.getElementById('timer').textContent =
+                `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+
+        // Update the timer every second
+        setInterval(updateTimer, 1000);
+
+        // Initial call to display the timer immediately
+        updateTimer();
+    </script>
+</body>
+</html>
