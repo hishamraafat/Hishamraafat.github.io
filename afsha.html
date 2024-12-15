@@ -6,25 +6,107 @@
     <title>Elapsed Time Since Afsha's Goal</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 50px;
-            background-color: #f4f4f9;
-            color: #333;
+            margin: 0;
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+            color: #fff;
         }
         h1 {
-            font-size: 2.5rem;
-            color: #d9534f;
+            font-size: 2.8rem;
+            color: #ff6347;
+            margin-bottom: 30px;
         }
         #timer {
-            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
             margin-top: 20px;
+        }
+        .time-box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .time-box span {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+        .time-box label {
+            margin-top: 10px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #ccc;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        .time-box span {
+            animation: pulse 2s infinite;
         }
     </style>
 </head>
 <body>
     <h1>Time Elapsed Since Afsha's Goal</h1>
-    <div id="timer">Loading...</div>
+    <div id="timer">
+        <div class="time-box">
+            <span id="days">0</span>
+            <label>Days</label>
+        </div>
+        <div class="time-box">
+            <span id="hours">0</span>
+            <label>Hours</label>
+        </div>
+        <div class="time-box">
+            <span id="minutes">0</span>
+            <label>Minutes</label>
+        </div>
+        <div class="time-box">
+            <span id="seconds">0</span>
+            <label>Seconds</label>
+        </div>
+    </div>
+    <footer>
+        Made with ❤️ for football fans by <a href="#" target="_blank">Your Name</a>
+    </footer>
 
     <script>
         // Set the date and time of Afsha's goal in UTC (8:26 PM UTC on 27 Nov 2020)
@@ -40,9 +122,11 @@
             const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
 
-            // Display the result in the timer div
-            document.getElementById('timer').textContent =
-                `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+            // Update the timer display
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
         }
 
         // Update the timer every second
