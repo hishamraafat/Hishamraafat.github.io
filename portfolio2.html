@@ -1,115 +1,634 @@
-<!DOCTYPE html>
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مساحة هشام رأفت الإبداعية</title>
+ <!-- Favicon (Tab Icon) -->
+  <link rel="icon" href="https://hishamraafat.github.io/icons8-creative-40.png" type="image/x-icon">
+
+  <!-- Meta description for SEO and social media -->
+  <meta name="description" content=" أنا هشام رأفت طبيب أسنان وكاتب محتوى، ودي مساحتي الإبداعية ومعرض أعمالي">
+
+  <!-- Open Graph tags for Facebook, LinkedIn, etc. -->
+  <meta property="og:title" content="مساحة هشام رأفت الإبداعية">
+  <meta property="og:description" content="أنا هشام رأفت طبيب أسنان وكاتب محتوى، ودي مساحتي الإبداعية ومعرض أعمالي">
+  <meta property="og:image" content="https://hishamraafat.github.io/IMG_20241203_024159_185.webp">
+  <meta property="og:url" content="https://hishamraafat.github.io/Portfolio.html">
+  <meta property="og:type" content="website">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Cairo Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
   <style>
-    body { font-family: 'Cairo', sans-serif; background-color: #f9fafb; }
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
-<body class="text-gray-800">
-  <!-- Header -->
-  <header class="bg-white shadow-sm py-8 mb-8 text-center border-b border-gray-200">
-    <h1 class="text-4xl font-bold mb-1"> هشام رأفت </h1>
-    <p class="text-gray-500">طبيب أسنان وكاتب محتوى، ودي مساحتي الإبداعية ومعرض أعمالي
 
-</p>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-6 text-center">
+    <img
+      src="/IMG_20241203_024159_185.webp"
+      alt="صورة هشام"
+      class="mx-auto rounded-full w-28 h-28 mb-4 object-cover transition-transform duration-300 hover:scale-105"
+      loading="lazy"
+    />
+    <h1 class="text-3xl font-bold">هشام رأفت</h1>
+    <p class="text-gray-600 mt-2"> طبيب أسنان وكاتب محتوى، ودي مساحتي الإبداعية ومعرض أعمالي</p>
   </header>
 
   <!-- Portfolio Section -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-8">
-    <h2 class="text-2xl font-semibold mb-6 border-b pb-2 border-gray-200">📁 أعمال مختارة</h2>
+  <section class="max-w-5xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-6 border-b pb-2">أعمالي</h2>
 
-    <div class="space-y-10">
-      <!-- Card Example 1 -->
-      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-        <img src="https://hishamraafat.github.io/1.jpg" alt="صورة البوست" class="w-full h-48 sm:h-64 object-cover rounded-t-2xl mb-4">
-        <h3 class="text-xl font-semibold mb-2"> روني هير سبراي - شركة روني فارما
-</h3>
-        <p class="text-sm text-gray-500 mb-4">نوع المحتوى: بوست | المنصة: فيسبوك</p>
-
-        <div class="bg-gray-50 p-4 rounded-lg mb-4 border border-gray-100">
-          <p class="leading-relaxed text-gray-700">
-روبانزل اختارت الي بيطول شعرها مش الي بيتعلق فيه !
-<br>
-اختاري روني هير سبراي بخلاصة الجوجوبا والروزماري والالوفيرا....
- لما شعرك يكون هو حبك الحقيقي 🩷
-<br>
-📩 اطلبيه دلوقتي من الرسايل او من أقرب صيدلية.
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="/1.jpg"
+            alt="بوست 1"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">روني هير سبراي - شركة روني فارما </h3>
+          <p class="text-sm text-gray-600">
+            روبانزل اختارت الي بيطول شعرها مش الي بيتعلق فيه !
+            اختاري روني هير سبراي بخلاصة الجوجوبا والروزماري والالوفيرا.... 
           </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-3 mb-4 text-sm">
-          <p><strong>👥 الفئة المستهدفة:</strong> فتيات وسيدات من 18 إلى 35 سنة</p>
-          <p><strong>💡 الفكرة الأساسية:</strong> الجمال والعناية بالشعر هي انعكاس للحب الذاتي والثقة بالنفس.</p>
-        </div>
-
-        <div class="flex justify-between items-center border-t pt-3">
-          <a href="https://www.facebook.com/photo?fbid=1022647269970339&set=a.597447199157017" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">رؤية البوست الأصلي ↗</a>
-          <span class="text-sm text-gray-400">🗓️ نُشر في مايو 2025</span>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/photo?fbid=1022647269970339&set=a.597447199157017"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/photo?fbid=1022647269970339&set=a.597447199157017"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
+      <!-- Post Card 1 -->
+         <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="/2.jpg"
+            alt="بوست 2"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">جراحة تسليك العصب - دكتور إكرامي طلعت </h3>
+          <p class="text-sm text-gray-600">
+        بتحس بتنميل في إيدك؟ صوابعك بتوجعك بالليل؟ بتلاقي صعوبة في انك تمسك الحاجات؟
 
-      <!-- Card Example 2 -->
-      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-        <img src="link-to-your-image2.jpg" alt="صورة البوست" class="w-full h-48 sm:h-64 object-cover rounded-t-2xl mb-4">
-        <h3 class="text-xl font-semibold mb-2">بوست إعلاني لخدمة تبييض الأسنان</h3>
-        <p class="text-sm text-gray-500 mb-4">نوع المحتوى: إعلاني | المنصة: إنستجرام</p>
-
-        <div class="bg-gray-50 p-4 rounded-lg mb-4 border border-gray-100">
-          <p class="leading-relaxed text-gray-700">
-            ابتسامتك تستحق تكون في أفضل حالاتها ✨  
-            مع جلسة تبييض الأسنان الاحترافية هتلاحظ الفرق من أول مرة، واحجز دلوقتي علشان العرض ساري لفترة محدودة.
           </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-3 mb-4 text-sm">
-          <p><strong>🎯 الهدف:</strong> زيادة الحجوزات خلال فترة العرض.</p>
-          <p><strong>👥 الفئة المستهدفة:</strong> عملاء العيادات الخاصة المهتمين بالمظهر الجمالي.</p>
-          <p><strong>💬 التون:</strong> دعائي تحفيزي مباشر.</p>
-          <p><strong>💡 الملاحظة الإبداعية:</strong> الاعتماد على لغة بصرية قوية واستخدام الإيموجي لجذب الانتباه.</p>
-        </div>
-
-        <div class="flex justify-between items-center border-t pt-3">
-          <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">رؤية البوست الأصلي ↗</a>
-          <span class="text-sm text-gray-400">🗓️ نُشر في يناير 2024</span>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/permalink.php?story_fbid=pfbid031PjGVksseLbRQJZrjyhon4PPsPy8ar8LQuYyZJZtzdEnTz1ns7i4pdVNS4jR9nMyl&id=61573104178811"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/permalink.php?story_fbid=pfbid031PjGVksseLbRQJZrjyhon4PPsPy8ar8LQuYyZJZtzdEnTz1ns7i4pdVNS4jR9nMyl&id=61573104178811"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
+      <!-- Post Card 1 -->
 
-      <!-- Card Example 3 -->
-      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-        <img src="link-to-your-image3.jpg" alt="صورة البوست" class="w-full h-48 sm:h-64 object-cover rounded-t-2xl mb-4">
-        <h3 class="text-xl font-semibold mb-2">بوست تعريفي بخدمة متابعة ما بعد العلاج</h3>
-        <p class="text-sm text-gray-500 mb-4">نوع المحتوى: تعريفي | المنصة: لينكدإن</p>
+      <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="/3.jpg"
+            alt="بوست 3"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">أيادي  - مركز أيادي للصحة النفسية Pink</h3>
+          <p class="text-sm text-gray-600">
+         الخوف واللوم مش هيكونوا الحل… الحل إنك تكوني جنبها، تساعديها تاخد القرار الصح، وتديها فرصة جديدة بعيد عن الإدمان.
 
-        <div class="bg-gray-50 p-4 rounded-lg mb-4 border border-gray-100">
-          <p class="leading-relaxed text-gray-700">
-            بعد ما تخلص علاجك، إحنا مكملين معاك 👋  
-            خدمة المتابعة بعد العلاج بتساعدنا نتابع حالتك ونطمن على استقرار النتايج لضمان راحتك ورضاك الكامل.
           </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-3 mb-4 text-sm">
-          <p><strong>🎯 الهدف:</strong> تعزيز ثقة العملاء واستمرارية التواصل بعد الخدمة.</p>
-          <p><strong>👥 الفئة المستهدفة:</strong> عملاء العيادة الحاليين.</p>
-          <p><strong>💬 التون:</strong> احترافي وداعم.</p>
-          <p><strong>💡 الملاحظة الإبداعية:</strong> استخدام أسلوب إنساني دافئ يركز على الراحة والثقة.</p>
-        </div>
-
-        <div class="flex justify-between items-center border-t pt-3">
-          <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">رؤية البوست الأصلي ↗</a>
-          <span class="text-sm text-gray-400">🗓️ نُشر في فبراير 2024</span>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/AyadyPH/posts/pfbid0YAsyKmw9o8GCnYGm56vJX8raFGPtQsWe8PzH2zh7bGEiobNR23QFntpsaSa6z8QYl?__cft__[0]=AZU4YdCiuNg_Kn_nfu62feTkxsa3YtaLMDu_vwWCXiTxqpq3cPqtPd6b5VIvL9HnCDASkC2CIOiDbTMr5wKcwBFD4mPZD1XLAQ60tda1z1fk3qucxpV5HAfTbgb2SOkGIhtbSXAxxLFsSjmBOvbTMw6z9hEf1FwmXCQnN10wye0tujDujKrfDsmE4RLkL0DjpFPLbxMWEoPkSiMSNs9HASzn&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/AyadyPH/posts/pfbid0YAsyKmw9o8GCnYGm56vJX8raFGPtQsWe8PzH2zh7bGEiobNR23QFntpsaSa6z8QYl?__cft__[0]=AZU4YdCiuNg_Kn_nfu62feTkxsa3YtaLMDu_vwWCXiTxqpq3cPqtPd6b5VIvL9HnCDASkC2CIOiDbTMr5wKcwBFD4mPZD1XLAQ60tda1z1fk3qucxpV5HAfTbgb2SOkGIhtbSXAxxLFsSjmBOvbTMw6z9hEf1FwmXCQnN10wye0tujDujKrfDsmE4RLkL0DjpFPLbxMWEoPkSiMSNs9HASzn&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
+      <!-- Post Card 1 -->
+<!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="https://scontent-dfw5-2.xx.fbcdn.net/v/t15.5256-10/491709232_2628175507387002_8170793280611919405_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a27664&_nc_ohc=iay6sz5CCLIQ7kNvwFxvmBW&_nc_oc=AdkAzgfSY82-MDYNl-yGRHExbXEYmf3lSP57W3ho6HYPfSHia5IyLM4gJzRK96M_tGc&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=yEJcQXL1E63upoT8EsRXTw&oh=00_AfKhU1RdZX221oLgAJg_o29eXbhtEEW_Bta3kmT5rY4F6g&oe=682B9D50"
+            alt="فيديو1"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">سكريبت ريل - د.أريج طه</h3>
+          <p class="text-sm text-gray-600">
+         بتاكلي وجبة كويسة بس برضو بترجعي تحسي بالجوع بعد نص ساعة ؟…
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/DrAreejNUT/videos/966913115636568/"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >شاهد الريل</span> 
+            <a
+              href="https://www.facebook.com/DrAreejNUT/videos/966913115636568/"
+              class="hover:text-blue-800"
+              title="عرض الريل"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+<!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="https://i0.wp.com/falsafabelbaladi.online/wp-content/uploads/2023/10/Meaning.jpg?fit=1200%2C1197&ssl=1"
+            alt="مقال"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">مقالة بين الخلود  والمعنى - موقع فلسفة بالبلدي</h3>
+          <p class="text-sm text-gray-600">
+بين الخلود والمعنى: رحلة الإنسان الدائبة للوصول للأبدية - فلسفة بالبلدي
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://falsafabelbaladi.online/%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D8%AE%D9%84%D9%88%D8%AF-%D9%88%D8%A7%D9%84%D9%85%D8%B9%D9%86%D9%89-%D8%B1%D8%AD%D9%84%D8%A9-%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86-%D8%A7%D9%84%D8%AF%D8%A7%D8%A6/#:~:text=%D8%A7%D9%84%D8%A3%D8%B6%D8%AF%D8%A7%D8%AF%20%D8%A3%D8%AF%D9%84%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A%20%D9%85%D9%86,%D9%85%D9%86%D8%A7%D8%AC%D9%85%20%D9%84%D8%A7%20%D9%86%D9%87%D8%A7%D9%8A%D8%A9%20%D9%84%D9%87%D8%A7%20%D9%85%D9%86%D9%87."
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >تابع القراءة</span> 
+            <a
+              href="https://www.facebook.com/DrAreejNUT/videos/966913115636568/"
+              class="hover:text-blue-800"
+              title="تابع القراءة"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+   <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="/4.jpg"
+            alt="بوست4 "
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">عيادة دكتور أحمد يحي لطب الأسنان</h3>
+          <p class="text-sm text-gray-600">
+           الطربوش بيحمي السنة ويرجع شكلها الطبيعي، لكن ايه الفرق بين الأنواع؟
+
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/Yehia.Clinic/posts/pfbid02hm5vUjuAYq7Lz4BQBFogSA1YSmKLwpYMY6y3g7G7jdBMtdeoAaHdyTsBfiN7Qimtl?__cft__[0]=AZX_Dg7mj-jRjdDIiyH2wNceYg5_5hLSbtowLwAcmyQKfp6m37h_iwfHbrhvfGicva96wrlY1gknCypmSh6HJlFS2XNYzOqFxLxT2DbtNSYaW9msRKiXDvW8tTHsgW9aSSZcwlO4iZduyL6t4pdAFUdTNGu_QWiHZwNGkbrt8cVTtx2-btOk6KyLpAY0zYI7_moFAQZR37eqWY-euJ-bnhdZ&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/Yehia.Clinic/posts/pfbid02hm5vUjuAYq7Lz4BQBFogSA1YSmKLwpYMY6y3g7G7jdBMtdeoAaHdyTsBfiN7Qimtl?__cft__[0]=AZX_Dg7mj-jRjdDIiyH2wNceYg5_5hLSbtowLwAcmyQKfp6m37h_iwfHbrhvfGicva96wrlY1gknCypmSh6HJlFS2XNYzOqFxLxT2DbtNSYaW9msRKiXDvW8tTHsgW9aSSZcwlO4iZduyL6t4pdAFUdTNGu_QWiHZwNGkbrt8cVTtx2-btOk6KyLpAY0zYI7_moFAQZR37eqWY-euJ-bnhdZ&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+ <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/495311724_1151514093656601_8720946393332578904_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=mWTyq13SuzwQ7kNvwHqt1Ym&_nc_oc=Adl5kxKTM3U202rVqKimNN3pDwhLW4xhnylWDqCHEXEC5bUB1hf_npraHFk0WS_tBYc&_nc_zt=23&_nc_ht=scontent.fcai20-2.fna&_nc_gid=-z2cu2FEkIzZaLpvtuEhEQ&oh=00_AfIMwOxIyWKIvRwBKE7axe5uS-mJpD66TyejXOClMVQu4g&oe=682BB945"
+            alt="كاروسيل"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">كاروسيل - مركز د.أريج طه</h3>
+          <p class="text-sm text-gray-600">
+          شوفي اشهر ٤ خرافات عن التغذية وتصحيحهم قبل ما يبوظولك كل مجهودك في الدايت.
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/DrAreejNUT/posts/pfbid0bGy7sgQpCFdj3WPYSPFhm912319dKPQ98UDzuou5EC7AMXS64szS5Um6zWQwp5Xsl?__cft__[0]=AZUdg0H3CcDDcPQt_NjUdpiVB0bp2uUxN1TKfQcGdLHTN4ON4N4BeB2DDV64DGF8s1Rf_oqww8jxdalw5ZTDjD_ytL8kUS8vVafwyD7EFqtOPvDiZCBgE0CXQBfI7TpzqnFRfNt9vz-KKOIf51Tj6vF4Kw7oCBhHrouGDf7tl-BGrQ&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/DrAreejNUT/posts/pfbid0bGy7sgQpCFdj3WPYSPFhm912319dKPQ98UDzuou5EC7AMXS64szS5Um6zWQwp5Xsl?__cft__[0]=AZUdg0H3CcDDcPQt_NjUdpiVB0bp2uUxN1TKfQcGdLHTN4ON4N4BeB2DDV64DGF8s1Rf_oqww8jxdalw5ZTDjD_ytL8kUS8vVafwyD7EFqtOPvDiZCBgE0CXQBfI7TpzqnFRfNt9vz-KKOIf51Tj6vF4Kw7oCBhHrouGDf7tl-BGrQ&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+   <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="/5.jpg"
+            alt="بوست 5"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">من الكحك للحرق - مركز د.أريج طه للعلاج الطبيعي والتغذية العلاجية</h3>
+          <p class="text-sm text-gray-600">
+            العيد كان كله أكل دسم وحلويات وكحك، بس اللبس معادش مقاسك ؟
+
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/share/p/1ZEdd9EviH/"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/share/p/1ZEdd9EviH/"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+
+
+   <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="/6.jpg"
+            alt="بوست 6"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">الإدارة الصحية بسيدي سالم</h3>
+          <p class="text-sm text-gray-600">
+            عيد أم سعيد لكل أم عظيمة بتدي وتضحي بدون مقابل
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/SidiSalem.MOH/posts/pfbid02AhLYQMvU9eZoZCqgKhtnjVEwyULdc52quGLvjzDkFrsGhpDnXHxJqnHmgzdoYcxYl?__cft__[0]=AZWPsvybBSC9dlsVXwJiyzK0n4buIvSvZ1UcTssz90lfU61Pk_Qxsezdy4pkfrfinpzrscI7JUxUvakavWcPcsW82zMQohawA9iHEiDL3RuVHQTVIcUu1uFfeC3Mvi32Nvcuxp-UKk8VSlGCMEKLyB5UcBAGK5klEtPl9O-nznE90JnOz6ydfKSlyO5xPRQM3KljguCTT--ezWN-099eAFoD&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/SidiSalem.MOH/posts/pfbid02AhLYQMvU9eZoZCqgKhtnjVEwyULdc52quGLvjzDkFrsGhpDnXHxJqnHmgzdoYcxYl?__cft__[0]=AZWPsvybBSC9dlsVXwJiyzK0n4buIvSvZ1UcTssz90lfU61Pk_Qxsezdy4pkfrfinpzrscI7JUxUvakavWcPcsW82zMQohawA9iHEiDL3RuVHQTVIcUu1uFfeC3Mvi32Nvcuxp-UKk8VSlGCMEKLyB5UcBAGK5klEtPl9O-nznE90JnOz6ydfKSlyO5xPRQM3KljguCTT--ezWN-099eAFoD&__tn__=%2CO%2CP-R"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+
+
+   <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="https://scontent.fcai20-2.fna.fbcdn.net/v/t1.6435-9/42461352_1996891190333835_244562584659820544_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=D3jb1qmqfDEQ7kNvwGY0bhN&_nc_oc=AdmeQhA8SW0XyOoboYrTyA6Nx55tuldkng-u6A-KEtrpq1Ik2pj9OppuylkKv_tshls&_nc_zt=23&_nc_ht=scontent.fcai20-2.fna&_nc_gid=wT0eCFLetsg0OGv4QSzBvw&oh=00_AfJ26DVeBWFir77YLDhRHI0KuIYa9vjJp_cCC17hgTws0w&oe=684B51E3"
+            alt="بوست 7"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">مقالة بوب ساينس - جمعية طبيب المستقبل</h3>
+          <p class="text-sm text-gray-600">
+           ليه تكون في الامتحان وفجأة تلاقيك بتدندن إعلان شامبو أو مطعم فراخ 🍗؟
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/photo?fbid=1996891183667169&set=a.688172434539057"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/photo?fbid=1996891183667169&set=a.688172434539057"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+
+
+   <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="https://scontent.fcai20-2.fna.fbcdn.net/v/t1.6435-9/66731784_1328922843939377_2628284513569996800_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ju5_sXKH6gcQ7kNvwG1sBOU&_nc_oc=AdnZClMBvsoi5AowWgrTSPPOIUZTpNn0L32_vhK70BC9IPYl3TVUdLS_1PZRT41XWOc&_nc_zt=23&_nc_ht=scontent.fcai20-2.fna&_nc_gid=GxOH7FS0JOcOeVeOsaFSBA&oh=00_AfK63J_oGQjOGxOTp-OgrXtK6IfhiCpaV4FYK6HCCKSeyg&oe=684B4C72"
+            alt="بوست 8"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">مقالة بوب ساينس - Eye Dental Journal</h3>
+          <p class="text-sm text-gray-600">تحذير المقالة دي ممكن تضربلك جزء من طفولتك البريئة 
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/photo/?fbid=1328922837272711&set=a.665559243609077"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/photo/?fbid=1328922837272711&set=a.665559243609077"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+
+
+   <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/490354412_1116630193841695_8392986778464192382_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=554csC7MaZ0Q7kNvwFBEQmd&_nc_oc=Adl5qfDAlCFkRBVK4r8t4ZwVRubBGlPjCc5CWkYRRQVcyknjIqGRr2kKx4xy1qrpJa8&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=U6220HtnvVlxuTKopBXNOw&oh=00_AfKAE6X-sqn4OML9yUmc1d2PktOhBiFyzc2vgkaeQkgNKg&oe=682B90E4"
+            alt="بوست 9"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">مركز أيادي للصحة النفسية </h3>
+          <p class="text-sm text-gray-600">
+          أحمد كان حاسس إن حياته دايرة مقفولة، كل ما يحاول يتغير يرجع لنفس العادات اللي بتسحبه لورا. كان عارف إن الإدمان بيسرق منه حياته، لكنه كان حاسس إن مفيش مخرج
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/photo?fbid=1080893947415320&set=a.509416781229709"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/photo?fbid=1080893947415320&set=a.509416781229709"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+
+
+   <!-- Post Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-shadow duration-300">
+        <div class="image-container">
+          <img
+            src="/9.jpg"
+            alt="بوست 10"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-2">مركز أيادي للصحة النفسية</h3>
+          <p class="text-sm text-gray-600">
+      "هو مش مدمن، دا طيش شباب وهيروح لحاله"
+"هنعمل إيه؟ هنوديه مصحة؟ الناس هتقول علينا إيه؟"
+"هيقدر يبطلها لوحده، دا بيعمل كدا لما يكون مضغوط من الشغل بس"
+          </p>
+          <div class="mt-4 bg-gray-100 rounded-md p-2 flex items-center justify-between text-blue-600 text-sm">
+            <span><a
+              href="https://www.facebook.com/AyadyPH/posts/pfbid02g33t8oUugW58cMY3yUPyGYFvfpsP15F3BCgAc4szSMNyJ18DgrqMPkGm8S1WaKeFl"
+              class="hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >اكمل القراءة</span> 
+            <a
+              href="https://www.facebook.com/AyadyPH/posts/pfbid02g33t8oUugW58cMY3yUPyGYFvfpsP15F3BCgAc4szSMNyJ18DgrqMPkGm8S1WaKeFl"
+              class="hover:text-blue-800"
+              title="عرض البوست"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Post Card 1 -->
+
+
+   
+
+  
+
     </div>
-  </main>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="max-w-3xl mx-auto p-6 mt-10 bg-white rounded-xl shadow">
+    <h2 class="text-2xl font-semibold mb-4 border-b pb-2">تواصل معي</h2>
+    <p class="text-gray-700 mb-2">هل تبحث عن كاتب محتوى مميز؟ لا تتردد في التواصل معي عبر:</p>
+    <ul class="text-blue-600 space-y-2">
+      <li>
+        <a href="https://wa.me/201067834955" class="hover:text-blue-800">واتساب</a>
+      </li>
+ <li>
+        <a href="mailto:hishamraafat99@gmail.com" target="_blank" class="hover:text-blue-800" rel="noopener noreferrer">جيميل</a>
+    </li>
+      <li>
+        <a href="https://www.facebook.com/hesham.virs.7/" target="_blank" class="hover:text-blue-800" rel="noopener noreferrer">فيسبوك</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/hisham-raafat-emad/" target="_blank" class="hover:text-blue-800" rel="noopener noreferrer">لينكدإن</a>
+      </li>
+ 
+    </ul>
+  </section>
 
   <!-- Footer -->
-  <footer class="text-center py-8 text-gray-500 text-sm mt-12 border-t border-gray-200">
+  <footer class="text-center text-sm text-gray-500 py-6">
     © 2025 هشام رأفت - جميع الحقوق محفوظة
   </footer>
+
 </body>
 </html>
+
+
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
