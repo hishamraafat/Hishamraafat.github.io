@@ -21,6 +21,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Cairo', sans-serif; background-color: #f9fafb; }
+    
+ .image-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+     .image-container img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body class="text-gray-800">
@@ -183,7 +205,8 @@
 
 <!-- Card Example 6 -->
       <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-        <img src="https://hishamraafat.github.io/Images/66731784_1328922843939377_2628284513569996800_n.jpg" alt="صورة" class="w-full h-48 sm:h-64 object-cover rounded-t-2xl mb-4">
+        <div class="image-container"> <img src="https://hishamraafat.github.io/Images/66731784_1328922843939377_2628284513569996800_n.jpg"  alt="صورة" class="w-full h-48 sm:h-64 object-cover rounded-t-2xl mb-4">         </div>
+
         <h3 class="text-xl font-semibold mb-2"> مقالة بوب ساينس - Eye Dental Journal
 
 
@@ -213,7 +236,6 @@
   </main>
 
   <!-- Footer -->
-  <footer >
  <!-- Contact Section -->
   <section class="max-w-3xl mx-auto p-6 mt-10 bg-white rounded-xl shadow">
     <h2 class="text-2xl font-semibold mb-4 border-b pb-2"> بتدور على كاتب محتوى ؟ محتاج تشوف عينة محتوى أكبر ؟</h2>
@@ -233,6 +255,12 @@
       </li>
  
     </ul>
-  </section>  </footer>
+  </section>  
+<!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    © 2025 هشام رأفت - جميع الحقوق محفوظة
+  </footer>
+
+</footer>
 </body>
 </html>
