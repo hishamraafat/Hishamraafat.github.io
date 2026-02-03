@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وحدة المرابعين - تسجيل الحالات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --p-color: #2a9d8f; --s-color: #264653; --bg: #f4f9f9; }
+        body { font-family: 'Tajawal', sans-serif; background-color: var(--bg); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 450px; border-top: 8px solid var(--p-color); }
+        h2 { text-align: center; color: var(--s-color); margin-bottom: 25px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; box-sizing: border-box; font-family: 'Tajawal'; }
+        button { width: 100%; padding: 15px; background: var(--p-color); color: white; border: none; border-radius: 10px; font-size: 18px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        #success-msg { display: none; text-align: center; background: #d4edda; color: #155724; padding: 15px; border-radius: 10px; margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>تسجيل حالة جديدة 🦷</h2>
+    
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showSuccess();}"></iframe>
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSe1eb-zVz2g_zE1LVm_uh2sIMBRZotwBgsCWPbMKQyECK8/formResponse" 
+          method="post" 
+          target="hidden_iframe" 
+          onsubmit="submitted=true;">
+
+        <div class="form-group">
+            <label>اسم الطبيب:</label>
+            <select name="entry.186287000" required>
+                <option value="" disabled selected>اختر الطبيب...</option>
+                <option value="اسم 1">اسم 1</option>
+                <option value="اسم 2">اسم 2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>اسم المريض رباعي:</label>
+            <input type="text" name="entry.1769888870" required placeholder="ادخل الاسم كاملاً">
+        </div>
+
+        <div class="form-group">
+            <label>نوع التركيبة:</label>
+            <select name="entry.254274138" required>
+                <option value="" disabled selected>اختر النوع...</option>
+                <option value="زيركون">زيركون</option>
+                <option value="بورسلين">بورسلين</option>
+                <option value="طقم">طقم</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>ملاحظات ؟:</label>
+            <textarea name="entry.1682849997" rows="3" placeholder="أي تفاصيل إضافية..."></textarea>
+        </div>
+
+        <button type="submit">إرسال للمعمل</button>
+    </form>
+
+    <div id="success-msg">✅ تم الإرسال بنجاح! تم تسجيل الحالة في الجدول.</div>
+</div>
+
+<script>
+    var submitted = false;
+    function showSuccess() {
+        document.getElementById('success-msg').style.display = 'block';
+        document.querySelector('form').reset();
+        // إخفاء الرسالة بعد 5 ثواني
+        setTimeout(() => {
+            document.getElementById('success-msg').style.display = 'none';
+        }, 5000);
+    }
+</script>
+
+</body>
+</html>
