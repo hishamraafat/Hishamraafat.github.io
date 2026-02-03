@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وحدة المرابعين - طلبات المعمل</title>
+    <title>وحدة المرابعين - طلبات التركيبات</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --p-color: #2a9d8f; --s-color: #264653; --bg: #f4f9f9; }
@@ -25,8 +25,8 @@
 <body>
 
 <div class="container">
-    <h2>تسجيل حالة جديدة 🦷</h2>
-    <p class="subtitle">وحدة المرابعين - قسم التركيبات</p>
+    <h2>تسجيل حالة تركيبات جديدة 🦷</h2>
+    <p class="subtitle">عيادة الأسنان - وحدة المرابعين</p>
 
     <form id="my-form" action="https://formspree.io/f/xwvqzgjv" method="POST">
         
@@ -34,24 +34,33 @@
             <label>اسم الطبيب:</label>
             <select name="اسم_الطبيب" required>
                 <option value="" disabled selected>اختر الطبيب...</option>
-                <option value="دكتور 1">دكتور 1</option>
-                <option value="دكتور 2">دكتور 2</option>
+               <option value="د.أحمد مرزوق">د.أحمد مرزوق</option>
+        <option value="د.سما">د.سما</option>
+        <option value="د.يمنى">د.يمنى</option>
+        <option value="د.اسراء عماد">د.اسراء عماد</option>
+        <option value="د.هشام رأفت">د.هشام رأفت</option>
+        <option value="د.محمود وحيد">د.محمود وحيد</option>
+        <option value="د.ريم معتز">د.ريم معتز</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>اسم المريض رباعي:</label>
-            <input type="text" name="اسم_المريض" required placeholder="الاسم كما هو في التذكرة">
+            <label>اسم المريض </label>
+            <input type="text" name="اسم_المريض" required placeholder="الاسم ">
         </div>
-
+  <div class="form-group">
+            <label>اسم الزوج ( او اسم الأب في حالة البيدو) </label>
+            <input type="text" name="اسم_ولي الأمر" required placeholder="الاسم ">
+        </div>
         <div class="form-group">
             <label>نوع التركيبة:</label>
             <select name="نوع_التركيبة" required>
                 <option value="" disabled selected>اختر النوع...</option>
-                <option value="زيركون">زيركون</option>
-                <option value="بورسلين">بورسلين (PFM)</option>
-                <option value="إيماكس">إيماكس</option>
-                <option value="طقم">طقم كامل/جزئي</option>
+                <option value="حافظ مسافة (باند و لوب)">حافظ مسافة (باند و لوب)</option>
+        <option value="حافظ مسافة (كراون و لوب)">حافظ مسافة (كراون و لوب)</option>
+        <option value="كراون PFM">كراون PFM</option>
+        <option value="كراون زيركون">كراون زيركون</option>
+        <option value="نايت جارد">نايت جارد</option>
             </select>
         </div>
 
@@ -81,7 +90,7 @@
         }
       }).then(response => {
         if (response.ok) {
-          status.innerHTML = "✅ تم الإرسال بنجاح! سيتم إخطارك فوراً.";
+          status.innerHTML = "✅ تم الإرسال بنجاح! .";
           status.className = "success";
           status.style.display = "block";
           form.reset()
