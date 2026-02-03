@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نظام تسجيل طلبات التركيبات الخاص بوحدة المرابعين.">
+<meta property="og:type" content="website">
+<meta property="og:description" content="نظام تسجيل طلبات التركيبات الخاص بوحدة المرابعين.">
+<meta property="og:image" content="http://hishamraafat.github.io/logo-removebg-preview.png"> <meta property="twitter:card" content="summary_large_image">
+
+    <title>وحدة المرابعين - طلبات التركيبات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --p-color: #2a9d8f; --s-color: #264653; --bg: #f4f9f9; }
+        body { font-family: 'Tajawal', sans-serif; background-color: var(--bg); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 450px; border-top: 8px solid var(--p-color); }
+        h2 { text-align: center; color: var(--s-color); margin-bottom: 5px; }
+        p.subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 25px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--s-color); }
+        input, select, textarea { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; box-sizing: border-box; font-family: 'Tajawal'; font-size: 16px; }
+        input:focus { border-color: var(--p-color); outline: none; }
+        button { width: 100%; padding: 15px; background: var(--p-color); color: white; border: none; border-radius: 10px; font-size: 18px; cursor: pointer; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        button:hover { background: #21867a; }
+        #status { display: none; text-align: center; padding: 15px; border-radius: 10px; margin-top: 20px; font-weight: bold; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>تسجيل حالة تركيبات جديدة 🦷</h2>
+    <p class="subtitle">عيادة الأسنان - وحدة المرابعين</p>
+
+    <form id="my-form" action="https://formspree.io/f/xwvqzgjv" method="POST">
+        
+        <div class="form-group">
+            <label>اسم الطبيب:</label>
+            <select name="اسم_الطبيب" required>
+                <option value="" disabled selected>اختر الطبيب...</option>
+               <option value="د.أحمد مرزوق">د.أحمد مرزوق</option>
+        <option value="د.سما">د.سما</option>
+        <option value="د.يمنى">د.يمنى</option>
+        <option value="د.اسراء عماد">د.اسراء عماد</option>
+        <option value="د.هشام رأفت">د.هشام رأفت</option>
+        <option value="د.محمود وحيد">د.محمود وحيد</option>
+        <option value="د.ريم معتز">د.ريم معتز</option>
+<option value="د.رنا الشاعر">د.رنا الشاعر</option>
+<option value="د.اسراء محمد">د.اسراء محمد</option>
+<option value="د.عمرو زايد">د.عمرو زايد</option>
+<option value="د.نهى سمير">د.نهى سمير</option>
+<option value="د.محمود طلعت">د.محمود طلعت</option>
+<option value="د.محمود محسن">د.محمود محسن</option>
+<option value="د.أحمد هراس">د.أحمد هراس</option>
+<option value="د.أحمد خضر">د.أحمد خضر</option>
+<option value="د.حاتم">د.حاتم</option>
+<option value="د.محمد حسن">د.محمد حسن</option>
+<option value="د.إبراهيم عطية">د.إبراهيم عطية</option>
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>اسم المريض </label>
+            <input type="text" name="اسم_المريض" required placeholder="الاسم ">
+        </div>
+  <div class="form-group">
+            <label>اسم الزوج ( او اسم الأب في حالة البيدو) </label>
+            <input type="text" name="اسم_ولي الأمر" required placeholder="الاسم ">
+        </div>
+        <div class="form-group">
+            <label>نوع التركيبة:</label>
+            <select name="نوع_التركيبة" required>
+                <option value="" disabled selected>اختر النوع...</option>
+                <option value="حافظ مسافة (باند و لوب)">حافظ مسافة (باند و لوب)</option>
+        <option value="حافظ مسافة (كراون و لوب)">حافظ مسافة (كراون و لوب)</option>
+        <option value="كراون PFM">كراون PFM</option>
+        <option value="كراون زيركون">كراون زيركون</option>
+        <option value="نايت جارد">نايت جارد</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>ملاحظات إضافية:</label>
+            <textarea name="ملاحظات" rows="3" placeholder="اللون، رقم السنة، أو أي تعليمات..."></textarea>
+        </div>
+
+        <button type="submit" id="my-form-button">إرسال الطلب</button>
+        <p id="my-form-status"></p>
+    </form>
+</div>
+
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "✅ تم الإرسال بنجاح! .";
+          status.className = "success";
+          status.style.display = "block";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.innerHTML = "❌ عذراً، حدث خطأ في الإرسال.";
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "❌ عذراً، حدثت مشكلة في الشبكة.";
+        status.className = "error";
+        status.style.display = "block";
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+</body>
+</html>
