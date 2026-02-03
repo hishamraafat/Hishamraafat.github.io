@@ -3,77 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وحدة المرابعين - تسجيل الحالات</title>
+    <title>وحدة المرابعين - طلبات المعمل</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --p-color: #2a9d8f; --s-color: #264653; --bg: #f4f9f9; }
         body { font-family: 'Tajawal', sans-serif; background-color: var(--bg); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
         .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 450px; border-top: 8px solid var(--p-color); }
-        h2 { text-align: center; color: var(--s-color); margin-bottom: 25px; }
+        h2 { text-align: center; color: var(--s-color); margin-bottom: 5px; }
+        p.subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 25px; }
         .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 8px; font-weight: bold; }
-        input, select, textarea { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; box-sizing: border-box; font-family: 'Tajawal'; }
-        button { width: 100%; padding: 15px; background: var(--p-color); color: white; border: none; border-radius: 10px; font-size: 18px; cursor: pointer; font-weight: bold; margin-top: 10px; }
-        #success-msg { display: none; text-align: center; background: #d4edda; color: #155724; padding: 15px; border-radius: 10px; margin-top: 20px; font-weight: bold; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--s-color); }
+        input, select, textarea { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; box-sizing: border-box; font-family: 'Tajawal'; font-size: 16px; }
+        input:focus { border-color: var(--p-color); outline: none; }
+        button { width: 100%; padding: 15px; background: var(--p-color); color: white; border: none; border-radius: 10px; font-size: 18px; cursor: pointer; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        button:hover { background: #21867a; }
+        #status { display: none; text-align: center; padding: 15px; border-radius: 10px; margin-top: 20px; font-weight: bold; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h2>تسجيل حالة جديدة 🦷</h2>
-    
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showSuccess();}"></iframe>
+    <p class="subtitle">وحدة المرابعين - قسم التركيبات</p>
 
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSe1eb-zVz2g_zE1LVm_uh2sIMBRZotwBgsCWPbMKQyECK8/formResponse" 
-          method="post" 
-          target="hidden_iframe" 
-          onsubmit="submitted=true;">
-
+    <form id="my-form" action="https://formspree.io/f/xwvqzgjv" method="POST">
+        
         <div class="form-group">
             <label>اسم الطبيب:</label>
-            <select name="entry.186287000" required>
+            <select name="اسم_الطبيب" required>
                 <option value="" disabled selected>اختر الطبيب...</option>
-                <option value="اسم 1">اسم 1</option>
-                <option value="اسم 2">اسم 2</option>
+                <option value="دكتور 1">دكتور 1</option>
+                <option value="دكتور 2">دكتور 2</option>
             </select>
         </div>
 
         <div class="form-group">
             <label>اسم المريض رباعي:</label>
-            <input type="text" name="entry.1769888870" required placeholder="ادخل الاسم كاملاً">
+            <input type="text" name="اسم_المريض" required placeholder="الاسم كما هو في التذكرة">
         </div>
 
         <div class="form-group">
             <label>نوع التركيبة:</label>
-            <select name="entry.254274138" required>
+            <select name="نوع_التركيبة" required>
                 <option value="" disabled selected>اختر النوع...</option>
                 <option value="زيركون">زيركون</option>
-                <option value="بورسلين">بورسلين</option>
-                <option value="طقم">طقم</option>
+                <option value="بورسلين">بورسلين (PFM)</option>
+                <option value="إيماكس">إيماكس</option>
+                <option value="طقم">طقم كامل/جزئي</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>ملاحظات ؟:</label>
-            <textarea name="entry.1682849997" rows="3" placeholder="أي تفاصيل إضافية..."></textarea>
+            <label>ملاحظات إضافية:</label>
+            <textarea name="ملاحظات" rows="3" placeholder="اللون، رقم السنة، أو أي تعليمات..."></textarea>
         </div>
 
-        <button type="submit">إرسال للمعمل</button>
+        <button type="submit" id="my-form-button">إرسال الطلب</button>
+        <p id="my-form-status"></p>
     </form>
-
-    <div id="success-msg">✅ تم الإرسال بنجاح! تم تسجيل الحالة في الجدول.</div>
 </div>
 
 <script>
-    var submitted = false;
-    function showSuccess() {
-        document.getElementById('success-msg').style.display = 'block';
-        document.querySelector('form').reset();
-        // إخفاء الرسالة بعد 5 ثواني
-        setTimeout(() => {
-            document.getElementById('success-msg').style.display = 'none';
-        }, 5000);
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "✅ تم الإرسال بنجاح! سيتم إخطارك فوراً.";
+          status.className = "success";
+          status.style.display = "block";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.innerHTML = "❌ عذراً، حدث خطأ في الإرسال.";
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "❌ عذراً، حدثت مشكلة في الشبكة.";
+        status.className = "error";
+        status.style.display = "block";
+      });
     }
+    form.addEventListener("submit", handleSubmit)
 </script>
 
 </body>
